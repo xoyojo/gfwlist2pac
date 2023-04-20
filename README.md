@@ -1,6 +1,7 @@
 # gfwlist2pac
 
-Automatically convert gfwlist to pac everyday
+Automatically convert gfwlist to pac everyday. 
+Proxy Port:40000
 
 Just use https://raw.githubusercontent.com/xoyojo/gfwlist2pac/main/gfwlist.pac
 
