@@ -2,7 +2,7 @@ name: Generate Pac File
 
 on:
   schedule:
-    - cron: '37 19 * * *'
+    - cron: '23 20 * * *'
   workflow_dispatch:
 
 jobs:
