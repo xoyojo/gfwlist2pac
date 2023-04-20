@@ -1,0 +1,52 @@
+name: Generate Pac File
+
+on:
+  schedule:
+    - cron: '37 19 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install packages
+        run: |
+          sudo apt-get install openssh-client python3-setuptools
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v3
+        with:
+          repository: JinnLynn/genpac
+          path: genpac
+
+      - uses: actions/checkout@v3
+        with:
+          repository: gfwlist/gfwlist
+          path: gfwlist
+      
+      - uses: xoyojo/git-config-user@master
+        with: 
+          path: .
+         
+
+      - run: |
+          cd genpac
+          sed 's/from collections import Callable/from collections.abc import Callable/g' -i $(grep 'from collections import Callable' . -rIl)
+          sudo python3 setup.py install
+
+      - name: Update
+        run: |
+          set -x
+
+          genpac --pac-proxy "SOCKS5 127.0.0.1:40000" --gfwlist-url - --gfwlist-local gfwlist/gfwlist.txt -o gfwlist.pac
+          sed '1,7d' -i gfwlist.pac
+
+          git add gfwlist.pac
+          git commit -m "[$(LANG=C date)] auto update" || exit 0
+
+          [ -n "${{ secrets.READ_ONLY }}" ] && git show && exit 0
+
+          git push origin main
