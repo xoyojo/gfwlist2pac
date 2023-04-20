@@ -1,6 +1,6 @@
 # gfwlist2pac
 
-Automatically convert gfwlist to pac everyday. 
+Automatically generate pac scripts for gfwlist every day using [JinnLynn/genpac](https://github.com/JinnLynn/genpac)
 Proxy Port:40000
 
 Just use https://raw.githubusercontent.com/xoyojo/gfwlist2pac/main/gfwlist.pac
