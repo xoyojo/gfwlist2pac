@@ -10,11 +10,11 @@
 
 ## Proxys / CDNs:
 
--Port 40000
+- Port 40000
     - FastGit: https://raw.fastgit.org/xoyojo/gfwlist2pac/main/gfwlist.pac
     - GitHub Proxy: https://ghproxy.com/https://raw.githubusercontent.com/xoyojo/gfwlist2pac/main/gfwlist.pac
     - 7ED SERVICE: https://raw.gitmirror.com/xoyojo/gfwlist2pac/main/gfwlist.pac
--Port 1080
+- Port 1080
     - FastGit: https://raw.fastgit.org/xoyojo/gfwlist2pac/main/gfwlist_1080.pac
     - GitHub Proxy: https://ghproxy.com/https://raw.githubusercontent.com/xoyojo/gfwlist2pac/main/gfwlist_1080.pac
     - 7ED SERVICE: https://raw.gitmirror.com/xoyojo/gfwlist2pac/main/gfwlist_1080.pac
