@@ -6039,7 +6039,6 @@ function testHost(host, index) {
         for (var j = 0; j < rules[index][i].length; j++) {
             lastRule = rules[index][i][j];
             if (host == lastRule || host.endsWith('.' + lastRule))
-                // return i % 2 == 0 ? 'DIRECT' : proxy;
                 if (index == 0)
                     return i % 2 == 0 ? 'DIRECT' : proxy1;
                 else
