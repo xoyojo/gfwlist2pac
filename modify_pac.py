@@ -27,7 +27,9 @@ var proxy2 = 'SOCKS5 127.0.0.1:1080';'''
         [
             "openai.com",
             "bing.com",
-            "discord.com"
+            "discord.com",
+            "discord.gg",
+            "discordapp.com",
         ]'''
     )     
 

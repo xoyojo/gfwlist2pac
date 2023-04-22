@@ -6,7 +6,9 @@ var rules = [
         [
             "openai.com",
             "bing.com",
-            "discord.com"
+            "discord.com",
+            "discord.gg",
+            "discordapp.com",
         ]
     ],
     [
